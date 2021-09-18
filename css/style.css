@@ -6,7 +6,8 @@
 }
 
 .container{
-    background: url("../assets/img/bg.jpg"); 
+    /* background: url("../assets/img/bg.jpg");  */
+    background: greenyellow;
     min-height: 100vh;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
@@ -33,4 +34,26 @@
     display: grid;
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: url("../assets/img/snakeHead.jpg"); 
+    /* background: black; */
+    background-size: cover;
+    border: 2px solid rgb(34, 4, 34); 
+    transform: rotate(180) scale(1.12);
+    border-radius: 20px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 16px;
+}
+
+.food{
+    /* background: url("../assets/img/fruit.jpg"); */
+    background: darkblue;
+    background-size: contain; 
+    border-radius: 20px;
 }
