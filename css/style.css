@@ -26,6 +26,15 @@
     font-family: 'New Tegomin', serif;
 }
 
+#highScoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
 #board{
     background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
     width: 90vmin;
