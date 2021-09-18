@@ -10,6 +10,7 @@ const musicSound = new Audio('assets/music/music.mp3');
 let lastPaintTime = 0;
 let speed = 10;
 let score = 0;
+let highScore = localStorage.getItem("highScoreStorage") ? localStorage.getItem("highScoreStorage") : 0;
 
 let snakeArr = [ {x: 13,y: 15} ];
 
@@ -64,6 +65,12 @@ function gameEngine() {
         foodSound.play();
         score++;
         scoreBox.innerHTML = "Score: " + score;
+
+        if(score>highScore){
+            highScore = score;
+            localStorage.setItem("highScoreStorage", JSON.stringify(highScore));
+            highScoreBox.innerHTML = "HighScore: " + highScore;
+        }
 
         snakeArr.unshift({
             x: snakeArr[0].x + inputDir.x, 
@@ -160,3 +167,14 @@ window.addEventListener('keydown', e => {
             break;
     }
 });
+
+if(localStorage.getItem("highScoreStorage") === null){
+    // console.log("no highscore");
+    highScore = 0;
+    localStorage.setItem("highScoreStorage", JSON.stringify(highScore))
+}
+else{
+    highScore = JSON.parse(highScore);
+    document.getElementById('highScoreBox').innerHTML = "HighScore: " + highScore;
+    // console.log("highscore");
+}

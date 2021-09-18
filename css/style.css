@@ -6,8 +6,7 @@
 }
 
 .container{
-    /* background: url("../assets/img/bg.jpg");  */
-    background: greenyellow;
+    background: url("../assets/img/bg.jpg");
     min-height: 100vh;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
@@ -38,7 +37,6 @@
 
 .head{
     background: url("../assets/img/snakeHead.jpg"); 
-    /* background: black; */
     background-size: cover;
     border: 2px solid rgb(34, 4, 34); 
     transform: rotate(180) scale(1.12);
@@ -52,8 +50,7 @@
 }
 
 .food{
-    /* background: url("../assets/img/fruit.jpg"); */
-    background: darkblue;
+    background: url("../assets/img/fruit.jpg");
     background-size: contain; 
     border-radius: 20px;
 }
